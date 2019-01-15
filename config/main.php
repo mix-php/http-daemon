@@ -10,7 +10,7 @@ return [
     'appVersion'       => '1.0.0',
 
     // 应用调试
-    'appDebug'         => true,
+    'appDebug'         => false,
 
     // 初始化回调
     'initialize'       => [],
