@@ -19,8 +19,9 @@
  * @property \Mix\WebSocket\MessageHandler $messageHandler
  * @property \Mix\Database\PDOConnection|Mix\Database\MasterSlave\PDOConnection $pdo
  * @property \Mix\Redis\RedisConnection $redis
- * @property \Mix\Database\Coroutine\PDOPool $pdoPool
- * @property \Mix\Redis\Coroutine\RedisPool $redisPool
+ * @property \Mix\Database\Pool\ConnectionPool $pdoPool
+ * @property \Mix\Redis\Pool\ConnectionPool $redisPool
+ * @property \Mix\Config\IniParser $ini
  */
 interface ApplicationInterface
 {
