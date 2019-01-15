@@ -6,7 +6,6 @@ use Mix\Config\IniParser;
 use Mix\Console\Command;
 use Mix\Console\CommandLine\Flag;
 use Mix\Console\PidFileHandler;
-use Mix\Helpers\FileSystemHelper;
 
 /**
  * Class BaseCommand
