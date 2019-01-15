@@ -27,11 +27,49 @@ return [
     // 命令
     'commands'         => [
 
-        'service start'   => ['Service\Start', 'description' => 'Start the mix-httpd service.', 'options' => ['-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)']],
-        'service stop'    => ['Service\Stop', 'description' => 'Stop the mix-httpd service.'],
-        'service restart' => ['Service\Restart', 'description' => 'Restart the mix-httpd service.'],
-        'service reload'  => ['Service\Reload', 'description' => 'Reload the worker process of the mix-httpd service.'],
-        'service status'  => ['Service\Status', 'description' => 'Check the status of the mix-httpd service.'],
+        'service start' => [
+            'Service\Start',
+            'description' => 'Start the mix-httpd service.',
+            'options'     => [
+                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+                '-d/--daemon'        => 'Run in the background',
+                '-u/--update'        => 'Enable code hot update',
+            ],
+        ],
+
+        'service stop' => [
+            'Service\Stop',
+            'description' => 'Stop the mix-httpd service.',
+            'options'     => [
+                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+            ],
+        ],
+
+        'service restart' => [
+            'Service\Restart',
+            'description' => 'Restart the mix-httpd service.',
+            'options'     => [
+                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+                '-d/--daemon'        => 'Run in the background',
+                '-u/--update'        => 'Enable code hot update',
+            ],
+        ],
+
+        'service reload' => [
+            'Service\Reload',
+            'description' => 'Reload the worker process of the mix-httpd service.',
+            'options'     => [
+                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+            ],
+        ],
+
+        'service status' => [
+            'Service\Status',
+            'description' => 'Check the status of the mix-httpd service.',
+            'options'     => [
+                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+            ],
+        ],
 
     ],
 
@@ -85,16 +123,7 @@ return [
         // 处理者
         [
             // 类路径
-            'class'      => Mix\Log\FileHandler::class,
-            // 属性
-            'properties' => [
-                // 日志目录
-                'dir'         => 'logs',
-                // 日志轮转类型
-                'rotate'      => Mix\Log\FileHandler::ROTATE_DAY,
-                // 最大文件尺寸
-                'maxFileSize' => 0,
-            ],
+            'class' => Mix\Log\FileHandler::class,
         ],
 
     ],

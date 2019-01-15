@@ -43,6 +43,9 @@ class BaseCommand extends Command
         ]);
         $ini->load();
         $this->config = $ini->sections();
+        // 配置日志组件
+        $handler         = app()->log->handler;
+        $handler->single = $this->config['settings']['log_file'] ?? '';
     }
 
     /**
@@ -51,7 +54,7 @@ class BaseCommand extends Command
      */
     public function getServicePid()
     {
-        $handler = new PidFileHandler(['pidFile' => $this->config['"pid_file'] ?? '']);
+        $handler = new PidFileHandler(['pidFile' => $this->config['settings']['pid_file'] ?? '']);
         return $handler->read();
     }
 
