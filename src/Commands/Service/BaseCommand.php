@@ -40,7 +40,7 @@ class BaseCommand extends Command
             throw new \Mix\Exceptions\InvalidArgumentException('Option \'-c/--configuration\' required.');
         }
         if (!FileSystemHelper::isAbsolute($filename)) {
-            $filename = app()->basePath . DIRECTORY_SEPARATOR . $filename;
+            $filename = getcwd() . DIRECTORY_SEPARATOR . $filename;
         }
         $ini = new IniParser([
             'filename' => $filename,
