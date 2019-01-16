@@ -48,7 +48,12 @@ class BaseCommand extends Command
         if (!$ini->load()) {
             throw new \Mix\Exceptions\InvalidArgumentException("Configuration file not found: {$filename}");
         }
-        $this->config = $ini->sections();
+        $this->config = [
+            'host'              => $ini->section('host'),
+            'port'              => $ini->section('port'),
+            'configurationFile' => $ini->section('configuration_file'),
+            'settings'          => $ini->section('settings'),
+        ];
         // 配置日志组件
         $handler         = app()->log->handler;
         $handler->single = $this->config['settings']['log_file'] ?? '';
