@@ -1,6 +1,6 @@
 ## Mix HTTPD
 
-`mix-http` 是一个 WEB 容器，负责执行 Mix 的 HTTP 应用 (类似 `PHP-FPM`)，由于基于 Swoole 的特性，所以具有常驻内存、异步IO的特点，性能非常强悍。
+一个 HTTP 服务容器，负责执行 Mix 的 HTTP 应用 (类似 `PHP-FPM`)，由于基于 Swoole\Http\Server 开发，所以具有常驻内存、异步IO等特点，性能非常强悍。
 
 ## 环境要求
 
@@ -11,7 +11,7 @@
 
 直接下载最新的 mix-httpd.zip 文件，解压到 `/usr/local/mix-httpd` 目录，软链接到 `/usr/local/bin` 目录即可。
 
-```shell
+```
 $> wget https://github.com/mix-php/mix-httpd/releases/download/v1.0.0/mix-httpd-1.0.0.zip
 $> unzip mix-httpd-1.0.0.zip -d /usr/local/mix-httpd
 $> cd /usr/local/mix-httpd
@@ -21,7 +21,7 @@ $> ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
 
 编辑配置文件：
 
-```shell
+```
 $> vim app.ini
 ```
 
@@ -29,13 +29,13 @@ $> vim app.ini
 
 启动服务：
 
-```shell
+```
 $> mix-httpd service start -c /usr/local/mix-httpd/app.ini
 ```
 
 查看帮助：
 
-```shell
+```
 $> mix-httpd -h
 Usage: mix-httpd.phar [OPTIONS] COMMAND [SUBCOMMAND] [arg...]
 
