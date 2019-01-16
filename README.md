@@ -12,11 +12,11 @@
 直接下载最新的 mix-httpd.zip 文件，解压到 `/usr/local/mix-httpd` 目录，软链接到 `/usr/local/bin` 目录即可。
 
 ```shell
-wget https://github.com/mix-php/mix-httpd/releases/download/v1.0.0/mix-httpd-1.0.0.zip
-unzip mix-httpd-1.0.0.zip -d /usr/local/mix-httpd
-cd /usr/local/mix-httpd
-chmod 755 mix-httpd.phar
-ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
+$> wget https://github.com/mix-php/mix-httpd/releases/download/v1.0.0/mix-httpd-1.0.0.zip
+$> unzip mix-httpd-1.0.0.zip -d /usr/local/mix-httpd
+$> cd /usr/local/mix-httpd
+$> chmod 755 mix-httpd.phar
+$> ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
 ```
 
 编辑配置文件：
@@ -28,13 +28,13 @@ ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
 启动服务：
 
 ```shell
-[root@localhost data]# mix-httpd service start -c /usr/local/mix-httpd/app.ini
+$> mix-httpd service start -c /usr/local/mix-httpd/app.ini
 ```
 
 查看帮助：
 
 ```shell
-[root@localhost data]# mix-httpd -h
+$> mix-httpd -h
 Usage: mix-httpd.phar [OPTIONS] COMMAND [SUBCOMMAND] [arg...]
 
 Options:
