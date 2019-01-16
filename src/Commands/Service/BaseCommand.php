@@ -6,6 +6,7 @@ use Mix\Config\IniParser;
 use Mix\Console\Command;
 use Mix\Console\CommandLine\Flag;
 use Mix\Console\PidFileHandler;
+use Mix\Helpers\FileSystemHelper;
 
 /**
  * Class BaseCommand
@@ -36,7 +37,10 @@ class BaseCommand extends Command
         // 获取配置
         $filename = Flag::string(['c', 'configuration'], '');
         if ($filename == '') {
-            $filename = app()->basePath . DIRECTORY_SEPARATOR . 'app.ini';
+            throw new \Mix\Exceptions\InvalidArgumentException('Option \'-c/--configuration\' required.');
+        }
+        if (!FileSystemHelper::isAbsolute($filename)) {
+            $filename = app()->basePath . DIRECTORY_SEPARATOR . $filename;
         }
         $ini = new IniParser([
             'filename' => $filename,
@@ -48,6 +52,10 @@ class BaseCommand extends Command
         // 配置日志组件
         $handler         = app()->log->handler;
         $handler->single = $this->config['settings']['log_file'] ?? '';
+        // Swoole 判断
+        if (!extension_loaded('swoole')) {
+            throw new \RuntimeException('Need swoole extension to run, install: https://www.swoole.com/');
+        }
     }
 
     /**
