@@ -54,6 +54,9 @@ class BaseCommand extends Command
             'configurationFile' => $ini->section('configuration_file'),
             'settings'          => $ini->section('settings'),
         ];
+        // 引入应用的自动加载
+        $autoload = $ini->section('autoload');
+        require $autoload;
         // 配置日志组件
         $handler         = app()->log->handler;
         $handler->single = $this->config['settings']['log_file'] ?? '';
