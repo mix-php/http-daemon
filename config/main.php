@@ -7,7 +7,7 @@ return [
     'appName'          => 'mix-httpd',
 
     // 应用版本
-    'appVersion'       => '1.0.0',
+    'appVersion'       => '2.0.1',
 
     // 应用调试
     'appDebug'         => false,
