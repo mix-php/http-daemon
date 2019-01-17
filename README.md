@@ -25,7 +25,8 @@ $> ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
 $> vim app.ini
 ```
 
-修改 `configuration_file` 为你的 `httpd` 应用配置文件路径，默认路径为：`/applications/httpd/config/http_permanent.php`
+- 修改 `autoload` 为
+- 修改 `configuration_file` 为你的 `httpd` 应用配置文件路径，默认路径为：`/applications/httpd/config/http_permanent.php`
 
 启动服务：
 
