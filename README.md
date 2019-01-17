@@ -90,7 +90,7 @@ Reactor        Num:       8
 Worker         Num:       8
 Hot            Update:    disabled
 Coroutine      Mode:      disabled
-configuration  File:      /data/applications/httpd/config/http_permanent.php
+Configuration  File:      /data/applications/httpd/config/http_permanent.php
 ```
 
 ## License
