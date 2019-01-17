@@ -30,6 +30,8 @@ $> vim app.ini
 - `autoload` HTTP 应用的 composer 自动加载文件路径。
 - `configuration_file` HTTP 应用的配置文件路径。
 
+## 启动
+
 查看帮助：
 
 ```
