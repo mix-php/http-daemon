@@ -72,6 +72,31 @@ Options:
 Developed with Mix PHP framework. (mixphp.cn)
 ```
 
+启动服务：
+
+```
+$> mix-httpd service start -c app.ini 
+                             _____
+_______ ___ _____ ___   _____  / /_  ____
+__/ __ `__ \/ /\ \/ /__ / __ \/ __ \/ __ \
+_/ / / / / / / /\ \/ _ / /_/ / / / / /_/ /
+/_/ /_/ /_/_/ /_/\_\  / .___/_/ /_/ .___/
+                     /_/         /_/
+
+Server         Name:      mix-httpd
+System         Name:      linux
+Framework      Version:   2.0.1-Beta1
+PHP            Version:   7.2.9
+Swoole         Version:   4.2.9
+Listen         Addr:      127.0.0.1
+Listen         Port:      9501
+Reactor        Num:       8
+Worker         Num:       8
+Hot            Update:    disabled
+Coroutine      Mode:      disabled
+configuration  File:      /data/applications/httpd/config/http_permanent.php
+```
+
 ## License
 
 Apache License Version 2.0, http://www.apache.org/licenses/
