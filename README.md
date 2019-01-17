@@ -30,12 +30,6 @@ $> vim app.ini
 - `autoload` HTTP 应用的 composer 自动加载文件路径。
 - `configuration_file` HTTP 应用的配置文件路径。
 
-启动服务：
-
-```
-$> mix-httpd service start -c /usr/local/mix-httpd/app.ini
-```
-
 查看帮助：
 
 ```
@@ -58,7 +52,7 @@ Run '/usr/local/bin/mix-httpd COMMAND [SUBCOMMAND] --help' for more information 
 Developed with Mix PHP framework. (mixphp.cn)
 ```
 
-查看 `service start` 命令的帮助：
+查看启动服务命令帮助：
 
 ```
 $> mix-httpd service start -h
@@ -75,7 +69,7 @@ Developed with Mix PHP framework. (mixphp.cn)
 启动服务：
 
 ```
-$> mix-httpd service start -c app.ini 
+$> mix-httpd service start -c /usr/local/mix-httpd/app.ini
                              _____
 _______ ___ _____ ___   _____  / /_  ____
 __/ __ `__ \/ /\ \/ /__ / __ \/ __ \/ __ \
