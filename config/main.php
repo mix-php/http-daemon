@@ -31,7 +31,7 @@ return [
             'Service\Start',
             'description' => 'Start the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+                '-c/--configuration' => 'FILENAME -- configuration file path',
                 '-d/--daemon'        => "\t" . 'Run in the background',
                 '-u/--update'        => "\t" . 'Enable code hot update',
             ],
@@ -41,7 +41,7 @@ return [
             'Service\Stop',
             'description' => 'Stop the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+                '-c/--configuration' => 'FILENAME -- configuration file path',
             ],
         ],
 
@@ -49,7 +49,7 @@ return [
             'Service\Restart',
             'description' => 'Restart the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+                '-c/--configuration' => 'FILENAME -- configuration file path',
                 '-d/--daemon'        => "\t" . 'Run in the background',
                 '-u/--update'        => "\t" . 'Enable code hot update',
             ],
@@ -59,7 +59,7 @@ return [
             'Service\Reload',
             'description' => 'Reload the worker process of the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+                '-c/--configuration' => 'FILENAME -- configuration file path',
             ],
         ],
 
@@ -67,7 +67,7 @@ return [
             'Service\Status',
             'description' => 'Check the status of the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
+                '-c/--configuration' => 'FILENAME -- configuration file path',
             ],
         ],
 

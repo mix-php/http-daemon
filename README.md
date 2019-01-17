@@ -44,7 +44,6 @@ Options:
   -v/--version	Print version information.
 
 Commands:
-  service
     service start	Start the mix-httpd service.
     service stop	Stop the mix-httpd service.
     service restart	Restart the mix-httpd service.
@@ -63,7 +62,7 @@ $> mix-httpd service start -h
 Usage: /usr/local/bin/mix-httpd service start [arg...]
 
 Options:
-  -c/--configuration    FILENAME -- configuration file path (searches if not given)
+  -c/--configuration    FILENAME -- configuration file path
   -d/--daemon           Run in the background
   -u/--update           Enable code hot update
 
