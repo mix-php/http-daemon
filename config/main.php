@@ -32,8 +32,8 @@ return [
             'description' => 'Start the mix-httpd service.',
             'options'     => [
                 '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
-                '-d/--daemon'        => 'Run in the background',
-                '-u/--update'        => 'Enable code hot update',
+                '-d/--daemon'        => "\t" . 'Run in the background',
+                '-u/--update'        => "\t" . 'Enable code hot update',
             ],
         ],
 
@@ -50,8 +50,8 @@ return [
             'description' => 'Restart the mix-httpd service.',
             'options'     => [
                 '-c/--configuration' => 'FILENAME -- configuration file path (searches if not given)',
-                '-d/--daemon'        => 'Run in the background',
-                '-u/--update'        => 'Enable code hot update',
+                '-d/--daemon'        => "\t" . 'Run in the background',
+                '-u/--update'        => "\t" . 'Enable code hot update',
             ],
         ],
 

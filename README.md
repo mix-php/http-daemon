@@ -12,8 +12,8 @@
 直接下载最新的 mix-httpd.zip 文件，解压到 `/usr/local/mix-httpd` 目录，软链接到 `/usr/local/bin` 目录即可。
 
 ```
-$> wget https://github.com/mix-php/mix-httpd/releases/download/v1.0.0/mix-httpd-1.0.0.zip
-$> unzip mix-httpd-1.0.0.zip -d /usr/local/mix-httpd
+$> wget https://github.com/mix-php/mix-httpd/releases/download/v2.0.1/mix-httpd-2.0.1.zip
+$> unzip mix-httpd-2.0.1.zip -d /usr/local/mix-httpd
 $> cd /usr/local/mix-httpd
 $> chmod 755 mix-httpd.phar
 $> ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
@@ -37,7 +37,7 @@ $> mix-httpd service start -c /usr/local/mix-httpd/app.ini
 
 ```
 $> mix-httpd -h
-Usage: mix-httpd.phar [OPTIONS] COMMAND [SUBCOMMAND] [arg...]
+Usage: /usr/local/bin/mix-httpd [OPTIONS] COMMAND [SUBCOMMAND] [arg...]
 
 Options:
   -h/--help	Print usage.
@@ -51,7 +51,21 @@ Commands:
     service reload	Reload the worker process of the mix-httpd service.
     service status	Check the status of the mix-httpd service.
 
-Run 'mix-httpd.phar COMMAND [SUBCOMMAND] --help' for more information on a command.
+Run '/usr/local/bin/mix-httpd COMMAND [SUBCOMMAND] --help' for more information on a command.
+
+Developed with Mix PHP framework. (mixphp.cn)
+```
+
+查看 `service start` 命令的帮助：
+
+```
+$> mix-httpd service start -h
+Usage: /usr/local/bin/mix-httpd service start [arg...]
+
+Options:
+  -c/--configuration    FILENAME -- configuration file path (searches if not given)
+  -d/--daemon           Run in the background
+  -u/--update           Enable code hot update
 
 Developed with Mix PHP framework. (mixphp.cn)
 ```
