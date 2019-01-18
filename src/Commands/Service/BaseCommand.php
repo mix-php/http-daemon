@@ -56,6 +56,7 @@ class BaseCommand extends Command
         ];
         // 引入应用的自动加载
         $autoload = $ini->section('autoload');
+        unset($GLOBALS['__composer_autoload_files']); // 重新载入composer_autoload_files
         require $autoload;
         // 配置日志组件
         $handler         = app()->log->handler;
