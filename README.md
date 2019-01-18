@@ -12,7 +12,7 @@
 直接下载最新的 mix-httpd.zip 文件，解压到 `/usr/local/mix-httpd` 目录，软链接到 `/usr/local/bin` 目录即可。
 
 ```
-$> wget https://github.com/mix-php/mix-httpd/releases/download/v2.0.1/mix-httpd-2.0.1.zip
+$> wget https://github.com/mix-php/mix-httpd/releases/download/v2.0.1-RC/mix-httpd-2.0.1-rc.zip
 $> unzip mix-httpd-2.0.1.zip -d /usr/local/mix-httpd
 $> cd /usr/local/mix-httpd
 $> chmod 755 mix-httpd.phar
