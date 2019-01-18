@@ -81,15 +81,15 @@ _/ / / / / / / /\ \/ _ / /_/ / / / / /_/ /
 
 Server         Name:      mix-httpd
 System         Name:      linux
-Framework      Version:   2.0.1-Beta1
 PHP            Version:   7.2.9
 Swoole         Version:   4.2.9
+Framework      Version:   2.0.1-RC
+Hot            Update:    disabled
+Coroutine      Mode:      disabled
 Listen         Addr:      127.0.0.1
 Listen         Port:      9501
 Reactor        Num:       8
 Worker         Num:       8
-Hot            Update:    disabled
-Coroutine      Mode:      disabled
 Configuration  File:      /data/applications/httpd/config/http_permanent.php
 ```
 
