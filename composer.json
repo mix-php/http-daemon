@@ -19,16 +19,17 @@
     "php": ">=7.0.0",
     "mix/framework": "dev-master",
     "mix/console": "dev-master",
-    "mix/log": "dev-master",
-    "mix/http": "dev-master"
+    "mix/log": "dev-master"
   },
   "minimum-stability": "beta",
   "autoload": {
     "psr-4": {
       "Httpd\\": "src/"
     },
+    "classmap": [
+      "src/ApplicationInterface.php"
+    ],
     "files": [
-      "src/ApplicationInterface.php",
       "src/functions.php"
     ]
   }
