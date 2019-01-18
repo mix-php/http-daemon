@@ -13,7 +13,7 @@
 
 ```
 $> wget https://github.com/mix-php/mix-httpd/releases/download/v2.0.1-RC/mix-httpd-2.0.1-rc.zip
-$> unzip mix-httpd-2.0.1.zip -d /usr/local/mix-httpd
+$> unzip mix-httpd-2.0.1-rc.zip -d /usr/local/mix-httpd
 $> cd /usr/local/mix-httpd
 $> chmod 755 mix-httpd.phar
 $> ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
