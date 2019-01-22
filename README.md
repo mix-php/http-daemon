@@ -51,11 +51,11 @@ log_file = /tmp/mix-httpd.log
 user = www
 ```
 
-修改以下两个配置：
+修改以下配置：
 
-- `autoload_file` HTTP 应用的 composer 自动加载文件路径。
-- `environment_file` HTTP 应用的环境配置文件路径。
-- `configuration_file` HTTP 应用的应用配置文件路径。
+- `autoload_file` composer 自动加载文件路径。
+- `environment_file` 环境配置文件路径。
+- `configuration_file` 应用配置文件路径。
 
 ## 启动
 
