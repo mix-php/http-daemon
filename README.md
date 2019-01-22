@@ -23,12 +23,39 @@ $> ln -s -f /usr/local/mix-httpd/mix-httpd.phar /usr/local/bin/mix-httpd
 
 ```
 $> vim app.ini
+;主机
+host = 127.0.0.1
+;端口
+port = 9501
+;自动加载
+autoload_file = /data/mix/vendor/autoload.php
+;环境文件
+environment_file = /data/mix/.env
+;配置文件
+configuration_file = /data/mix/applications/httpd/config/http_permanent.php
+;运行参数：https://wiki.swoole.com/wiki/page/274.html
+[settings]
+;开启协程
+enable_coroutine = 0
+;主进程事件处理线程数
+reactor_num = 8
+;工作进程数
+worker_num = 8
+;进程的最大任务数
+max_request = 10000
+;PID 文件
+pid_file = /var/run/mix-httpd.pid
+;日志文件路径
+log_file = /tmp/mix-httpd.log
+;子进程运行用户
+user = www
 ```
 
 修改以下两个配置：
 
 - `autoload_file` HTTP 应用的 composer 自动加载文件路径。
-- `configuration_file` HTTP 应用的配置文件路径。
+- `environment_file` HTTP 应用的环境配置文件路径。
+- `configuration_file` HTTP 应用的应用配置文件路径。
 
 ## 启动
 
