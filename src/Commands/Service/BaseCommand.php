@@ -54,10 +54,13 @@ class BaseCommand extends Command
             'configurationFile' => $ini->section('configuration_file'),
             'settings'          => $ini->section('settings'),
         ];
-        // 引入应用的自动加载
+        // 引入自动加载
         $autoloadFile = $ini->section('autoload_file');
         unset($GLOBALS['__composer_autoload_files']); // 重新载入composer_autoload_files
         require $autoloadFile;
+        // 载入环境配置
+        $environmentFile = $ini->section('environment_file');
+        \Mix::loadEnvironmentFrom($environmentFile);
         // 配置日志组件
         $handler         = app()->log->handler;
         $handler->single = $this->config['settings']['log_file'] ?? '';
