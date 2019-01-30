@@ -3,7 +3,7 @@
 namespace Httpd\Commands\Service;
 
 use Mix\Console\CommandLine\Flag;
-use Mix\Http\Server;
+use Mix\Http\Server\HttpServer;
 
 /**
  * Start 子命令
@@ -41,7 +41,7 @@ class StartCommand extends BaseCommand
     public function main()
     {
         // 获取服务信息
-        $server = new Server($this->config);
+        $server = new HttpServer($this->config);
         $pid    = $this->getServicePid();
         if ($pid) {
             println(sprintf(self::IS_RUNNING, $pid));
