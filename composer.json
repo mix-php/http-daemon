@@ -19,7 +19,8 @@
     "php": ">=7.0.0",
     "mix/framework": "dev-master",
     "mix/console": "dev-master",
-    "mix/log": "dev-master"
+    "mix/log": "dev-master",
+    "mix/iniparser": "dev-master"
   },
   "minimum-stability": "beta",
   "autoload": {

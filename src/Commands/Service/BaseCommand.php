@@ -2,7 +2,7 @@
 
 namespace Httpd\Commands\Service;
 
-use Mix\Config\IniParser;
+use Mix\IniParser\IniParser;
 use Mix\Console\Command;
 use Mix\Console\CommandLine\Flag;
 use Mix\Console\PidFileHandler;
