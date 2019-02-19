@@ -20,7 +20,7 @@
     "mix/framework": "dev-master",
     "mix/console": "dev-master",
     "mix/log": "dev-master",
-    "mix/iniparser": "dev-master"
+    "mix/ini": "dev-master"
   },
   "minimum-stability": "beta",
   "autoload": {
