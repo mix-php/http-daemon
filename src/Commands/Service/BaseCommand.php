@@ -3,16 +3,16 @@
 namespace Mix\Http\Daemon\Commands\Service;
 
 use Mix\Ini\IniParser;
-use Mix\Console\Command;
 use Mix\Console\CommandLine\Flag;
 use Mix\Console\PidFileHandler;
 use Mix\Helpers\FileSystemHelper;
+use Mix\Core\Bean\AbstractObject;
 
 /**
  * Class BaseCommand
  * @package Httpd\Commands\Service
  */
-class BaseCommand extends Command
+class BaseCommand extends AbstractObject
 {
 
     /**
