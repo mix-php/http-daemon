@@ -15,6 +15,9 @@ return [
     // 基础路径
     'basePath'         => dirname(__DIR__),
 
+    // 运行目录路径
+    'runtimePath'      => '',
+
     // 命令命名空间
     'commandNamespace' => 'Mix\Http\Daemon\Commands',
 
