@@ -22,12 +22,6 @@
   "autoload": {
     "psr-4": {
       "Mix\\Http\\Daemon\\": "src/"
-    },
-    "classmap": [
-      "src/ApplicationInterface.php"
-    ],
-    "files": [
-      "src/functions.php"
-    ]
+    }
   }
 }
