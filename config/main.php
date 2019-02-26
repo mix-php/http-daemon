@@ -10,16 +10,13 @@ return [
     'appVersion'       => '2.0.1-RC2',
 
     // 应用调试
-    'appDebug'         => false,
+    'appDebug'         => env('APP_DEBUG'),
 
     // 基础路径
-    'basePath'         => str_replace(['phar://', '/'], ['', DIRECTORY_SEPARATOR], dirname(dirname(__DIR__))),
-
-    // 运行目录路径
-    'runtimePath'      => '',
+    'basePath'         => dirname(__DIR__),
 
     // 命令命名空间
-    'commandNamespace' => 'Httpd\Commands',
+    'commandNamespace' => 'Mix\Http\Daemon\Commands',
 
     // 命令
     'commands'         => [

@@ -1,6 +1,6 @@
 <?php
 
-namespace Httpd\Commands\Service;
+namespace Mix\Http\Daemon\Commands\Service;
 
 /**
  * Status 子命令

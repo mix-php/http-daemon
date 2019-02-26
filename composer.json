@@ -1,6 +1,6 @@
 {
-  "name": "mix/mix-cli",
-  "description": "MixPHP 系统命令开发 http://www.mixphp.cn",
+  "name": "mix/http-daemon",
+  "description": "MixPHP HTTP 守护程序 http://www.mixphp.cn",
   "type": "project",
   "keywords": [
     "framework",
@@ -17,15 +17,11 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "mix/framework": "dev-master",
-    "mix/console": "dev-master",
-    "mix/log": "dev-master",
     "mix/ini": "dev-master"
   },
-  "minimum-stability": "beta",
   "autoload": {
     "psr-4": {
-      "Httpd\\": "src/"
+      "Mix\\Http\\Daemon\\": "src/"
     },
     "classmap": [
       "src/ApplicationInterface.php"
