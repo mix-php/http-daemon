@@ -49,22 +49,21 @@ class BaseCommand extends AbstractObject
             throw new \Mix\Exceptions\InvalidArgumentException("Configuration file not found: {$filename}");
         }
         // 应用配置处理
-        $application                = $ini->section('application');
-        $application['config_file'] = $ini->section('application.config_file');
-        if (!FileSystemHelper::isAbsolute($application['config_file'])) {
-            $iniDir                     = \Mix\Helpers\FileSystemHelper::dirname($filename);
-            $application['config_file'] = $iniDir . DIRECTORY_SEPARATOR . $application['config_file'];
+        $configFile = $ini->section('application.config_file');
+        if (!FileSystemHelper::isAbsolute($configFile)) {
+            $iniDir     = \Mix\Helpers\FileSystemHelper::dirname($filename);
+            $configFile = $iniDir . DIRECTORY_SEPARATOR . $configFile;
         }
-        if (!is_file($application['config_file'])) {
+        if (!is_file($configFile)) {
             $iniFile = \Mix\Helpers\FileSystemHelper::basename($filename);
-            throw new \Mix\Exceptions\InvalidArgumentException("{$iniFile}: 'application.config_file' file not found: {$application['config_file']}");
+            throw new \Mix\Exceptions\InvalidArgumentException("{$iniFile}: 'application.config_file' file not found: {$configFile}");
         }
         // 构造配置信息
         $this->config = [
-            'host'        => $ini->section('host'),
-            'port'        => $ini->section('port'),
-            'application' => $application,
-            'settings'    => $ini->section('settings'),
+            'host'       => $ini->section('server.host'),
+            'port'       => $ini->section('server.port'),
+            'configFile' => $configFile,
+            'setting'    => $ini->section('setting'),
         ];
         // 配置日志组件
         $handler         = app()->log->handler;
