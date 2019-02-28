@@ -49,9 +49,9 @@ class StartCommand extends BaseCommand
         }
         // 启动服务
         if ($this->update) {
-            $server->settings['max_request'] = 1;
+            $server->setting['max_request'] = 1;
         }
-        $server->settings['daemonize'] = $this->daemon;
+        $server->setting['daemonize'] = $this->daemon;
         $server->start();
     }
 
