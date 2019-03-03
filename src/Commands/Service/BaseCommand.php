@@ -5,7 +5,7 @@ namespace Mix\Http\Daemon\Commands\Service;
 use Mix\Ini\IniParser;
 use Mix\Console\CommandLine\Flag;
 use Mix\Console\PidFileHandler;
-use Mix\Helpers\FileSystemHelper;
+use Mix\Helper\FileSystemHelper;
 use Mix\Core\Bean\AbstractObject;
 
 /**
@@ -37,7 +37,7 @@ class BaseCommand extends AbstractObject
         // 服务器配置处理
         $filename = Flag::string(['c', 'configuration'], '');
         if ($filename == '') {
-            throw new \Mix\Exceptions\InvalidArgumentException('Option \'-c/--configuration\' required.');
+            throw new \Mix\Exception\InvalidArgumentException('Option \'-c/--configuration\' required.');
         }
         if (!FileSystemHelper::isAbsolute($filename)) {
             $filename = getcwd() . DIRECTORY_SEPARATOR . $filename;
@@ -46,17 +46,17 @@ class BaseCommand extends AbstractObject
             'filename' => $filename,
         ]);
         if (!$ini->load()) {
-            throw new \Mix\Exceptions\InvalidArgumentException("Configuration file not found: {$filename}");
+            throw new \Mix\Exception\InvalidArgumentException("Configuration file not found: {$filename}");
         }
         // 应用配置处理
         $configFile = $ini->section('application.config_file');
         if (!FileSystemHelper::isAbsolute($configFile)) {
-            $iniDir     = \Mix\Helpers\FileSystemHelper::dirname($filename);
+            $iniDir     = \Mix\Helper\FileSystemHelper::dirname($filename);
             $configFile = $iniDir . DIRECTORY_SEPARATOR . $configFile;
         }
         if (!is_file($configFile)) {
-            $iniFile = \Mix\Helpers\FileSystemHelper::basename($filename);
-            throw new \Mix\Exceptions\InvalidArgumentException("{$iniFile}: 'application.config_file' file not found: {$configFile}");
+            $iniFile = \Mix\Helper\FileSystemHelper::basename($filename);
+            throw new \Mix\Exception\InvalidArgumentException("{$iniFile}: 'application.config_file' file not found: {$configFile}");
         }
         // 构造配置信息
         $this->config = [

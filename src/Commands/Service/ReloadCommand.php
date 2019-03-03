@@ -2,7 +2,7 @@
 
 namespace Mix\Http\Daemon\Commands\Service;
 
-use Mix\Helpers\ProcessHelper;
+use Mix\Helper\ProcessHelper;
 
 /**
  * Reload 子命令
