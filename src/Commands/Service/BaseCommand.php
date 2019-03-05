@@ -67,7 +67,7 @@ class BaseCommand extends AbstractObject
         ];
         // 配置日志组件
         $handler         = app()->log->handler;
-        $handler->single = $this->config['settings']['log_file'] ?? '';
+        $handler->single = $this->config['setting']['log_file'] ?? '';
         // Swoole 判断
         if (!extension_loaded('swoole')) {
             throw new \RuntimeException('Need swoole extension to run, install: https://www.swoole.com/');
@@ -80,7 +80,7 @@ class BaseCommand extends AbstractObject
      */
     public function getServicePid()
     {
-        $handler = new PidFileHandler(['pidFile' => $this->config['settings']['pid_file'] ?? '']);
+        $handler = new PidFileHandler(['pidFile' => $this->config['setting']['pid_file'] ?? '']);
         return $handler->read();
     }
 
