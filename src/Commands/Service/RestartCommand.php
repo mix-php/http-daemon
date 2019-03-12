@@ -5,13 +5,16 @@ namespace Mix\Http\Daemon\Commands\Service;
 use Mix\Helper\ProcessHelper;
 
 /**
- * Restart 子命令
+ * Class RestartCommand
+ * @package Mix\Http\Daemon\Commands\Service
  * @author LIUJIAN <coder.keda@gmail.com>
  */
 class RestartCommand extends StartCommand
 {
 
-    // 主函数
+    /**
+     * 主函数
+     */
     public function main()
     {
         // 获取服务状态

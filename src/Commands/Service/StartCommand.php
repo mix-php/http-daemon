@@ -6,7 +6,8 @@ use Mix\Console\CommandLine\Flag;
 use Mix\Http\Server\HttpServer;
 
 /**
- * Start 子命令
+ * Class StartCommand
+ * @package Mix\Http\Daemon\Commands\Service
  * @author LIUJIAN <coder.keda@gmail.com>
  */
 class StartCommand extends BaseCommand

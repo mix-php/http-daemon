@@ -5,13 +5,16 @@ namespace Mix\Http\Daemon\Commands\Service;
 use Mix\Helper\ProcessHelper;
 
 /**
- * Stop 子命令
+ * Class StopCommand
+ * @package Mix\Http\Daemon\Commands\Service
  * @author LIUJIAN <coder.keda@gmail.com>
  */
 class StopCommand extends BaseCommand
 {
 
-    // 主函数
+    /**
+     * 主函数
+     */
     public function main()
     {
         // 获取服务状态

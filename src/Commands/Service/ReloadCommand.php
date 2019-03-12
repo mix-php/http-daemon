@@ -5,13 +5,16 @@ namespace Mix\Http\Daemon\Commands\Service;
 use Mix\Helper\ProcessHelper;
 
 /**
- * Reload 子命令
+ * Class ReloadCommand
+ * @package Mix\Http\Daemon\Commands\Service
  * @author LIUJIAN <coder.keda@gmail.com>
  */
 class ReloadCommand extends BaseCommand
 {
 
-    // 主函数
+    /**
+     * 主函数
+     */
     public function main()
     {
         // 获取服务状态

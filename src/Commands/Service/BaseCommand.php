@@ -10,16 +10,25 @@ use Mix\Core\Bean\AbstractObject;
 
 /**
  * Class BaseCommand
- * @package Httpd\Commands\Service
+ * @package Mix\Http\Daemon\Commands\Service
+ * @author LIUJIAN <coder.keda@gmail.com>
  */
 class BaseCommand extends AbstractObject
 {
 
     /**
-     * 提示
+     * 运行中提示
      */
     const IS_RUNNING = 'Service is running, PID : %d';
+
+    /**
+     * 未运行提示
+     */
     const NOT_RUNNING = 'Service is not running.';
+
+    /**
+     * 执行成功提示
+     */
     const EXEC_SUCCESS = 'Command executed successfully.';
 
     /**
