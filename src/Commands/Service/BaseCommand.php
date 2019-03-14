@@ -59,10 +59,6 @@ class BaseCommand extends AbstractObject
         }
         // 应用配置处理
         $configFile = $ini->section('application.config_file');
-        if (!FileSystemHelper::isAbsolute($configFile)) {
-            $iniDir     = \Mix\Helper\FileSystemHelper::dirname($filename);
-            $configFile = $iniDir . DIRECTORY_SEPARATOR . $configFile;
-        }
         if (!is_file($configFile)) {
             $iniFile = \Mix\Helper\FileSystemHelper::basename($filename);
             throw new \Mix\Exception\InvalidArgumentException("{$iniFile}: 'application.config_file' file not found: {$configFile}");
