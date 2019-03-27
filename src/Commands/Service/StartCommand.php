@@ -8,7 +8,7 @@ use Mix\Http\Server\HttpServer;
 /**
  * Class StartCommand
  * @package Mix\Http\Daemon\Commands\Service
- * @author LIUJIAN <coder.keda@gmail.com>
+ * @author liu,jian <coder.keda@gmail.com>
  */
 class StartCommand extends BaseCommand
 {

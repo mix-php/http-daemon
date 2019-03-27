@@ -7,7 +7,7 @@ use Mix\Helper\ProcessHelper;
 /**
  * Class RestartCommand
  * @package Mix\Http\Daemon\Commands\Service
- * @author LIUJIAN <coder.keda@gmail.com>
+ * @author liu,jian <coder.keda@gmail.com>
  */
 class RestartCommand extends StartCommand
 {
