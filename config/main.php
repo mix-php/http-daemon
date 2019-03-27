@@ -30,7 +30,7 @@ return [
             'options'     => [
                 '-c/--configuration' => 'FILENAME -- configuration file path',
                 '-d/--daemon'        => "\t" . 'Run in the background',
-                '-u/--update'        => "\t" . 'Enable code hot update',
+                '-u/--update'        => "\t" . 'Enable code hot update (only sync available)',
             ],
         ],
 
@@ -48,7 +48,7 @@ return [
             'options'     => [
                 '-c/--configuration' => 'FILENAME -- configuration file path',
                 '-d/--daemon'        => "\t" . 'Run in the background',
-                '-u/--update'        => "\t" . 'Enable code hot update',
+                '-u/--update'        => "\t" . 'Enable code hot update (only sync available)',
             ],
         ],
 
