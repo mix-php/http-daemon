@@ -28,9 +28,9 @@ return [
             'Service\Start',
             'description' => 'Start the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path',
-                '-d/--daemon'        => "\t" . 'Run in the background',
-                '-u/--update'        => "\t" . 'Enable code hot update (only sync available)',
+                [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
+                [['d', 'daemon'], 'description' => "\t" . 'Run in the background'],
+                [['u', 'update'], 'description' => "\tEnable code hot update (only sync available"],
             ],
         ],
 
@@ -38,7 +38,7 @@ return [
             'Service\Stop',
             'description' => 'Stop the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path',
+                [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
             ],
         ],
 
@@ -46,9 +46,9 @@ return [
             'Service\Restart',
             'description' => 'Restart the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path',
-                '-d/--daemon'        => "\t" . 'Run in the background',
-                '-u/--update'        => "\t" . 'Enable code hot update (only sync available)',
+                [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
+                [['d', 'daemon'], 'description' => "\t" . 'Run in the background'],
+                [['u', 'update'], 'description' => "\tEnable code hot update (only sync available"],
             ],
         ],
 
@@ -56,7 +56,7 @@ return [
             'Service\Reload',
             'description' => 'Reload the worker process of the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path',
+                [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
             ],
         ],
 
@@ -64,7 +64,7 @@ return [
             'Service\Status',
             'description' => 'Check the status of the mix-httpd service.',
             'options'     => [
-                '-c/--configuration' => 'FILENAME -- configuration file path',
+                [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
             ],
         ],
 
