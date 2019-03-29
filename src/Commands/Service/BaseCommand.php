@@ -46,13 +46,13 @@ class BaseCommand extends AbstractObject
         // 服务器配置处理
         $file = Flag::string(['c', 'configuration'], '');
         if ($file == '') {
-            throw new \Mix\Exception\InvalidArgumentException('Option \'-c/--configuration\' required.');
+            println("Option '-c/--configuration' required.");
         }
         if (!FileSystemHelper::isAbsolute($file)) {
             $file = getcwd() . DIRECTORY_SEPARATOR . $file;
         }
         if (!is_file($file)) {
-            throw new \Mix\Exception\InvalidArgumentException("Configuration file not found: {$file}");
+            println("Configuration file not found: {$file}");
         }
         $config = require $file;
         // 应用配置处理
