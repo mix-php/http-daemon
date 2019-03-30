@@ -46,19 +46,22 @@ class BaseCommand extends AbstractObject
         // 服务器配置处理
         $file = Flag::string(['c', 'configuration'], '');
         if ($file == '') {
-            throw new \Mix\Exception\InvalidArgumentException("Option '-c/--configuration' required.");
+            println("Option '-c/--configuration' required.");
+            exit;
         }
         if (!FileSystemHelper::isAbsolute($file)) {
             $file = getcwd() . DIRECTORY_SEPARATOR . $file;
         }
         if (!is_file($file)) {
-            throw new \Mix\Exception\InvalidArgumentException("Configuration file not found: {$file}");
+            println("Configuration file not found: {$file}");
+            exit;
         }
         $config = require $file;
         // 应用配置处理
         if (!is_file($config['application']['config_file'])) {
             $filename = \Mix\Helper\FileSystemHelper::basename($file);
-            throw new \Mix\Exception\InvalidArgumentException("{$filename}: 'application.config_file' file not found: {$config['application']['config_file']}");
+            println("{$filename}: 'application.config_file' file not found: {$config['application']['config_file']}");
+            exit;
         }
         // 构造配置信息
         $this->config = [
@@ -68,12 +71,13 @@ class BaseCommand extends AbstractObject
             'setting'    => $config['setting'],
         ];
         // 配置日志组件
-        $handler             = app()->log->handler;
-        $fileHandler         = $handler->fileHandler;
+        $handler = app()->log->handler;
+        $fileHandler = $handler->fileHandler;
         $fileHandler->single = $this->config['setting']['log_file'] ?? '';
         // Swoole 判断
         if (!extension_loaded('swoole')) {
-            throw new \RuntimeException('Need swoole extension to run, install: https://www.swoole.com/');
+            println('Need swoole extension to run, install: https://www.swoole.com/');
+            exit;
         }
     }
 
