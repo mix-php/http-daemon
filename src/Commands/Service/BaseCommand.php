@@ -71,9 +71,14 @@ class BaseCommand extends AbstractObject
             'setting'    => $config['setting'],
         ];
         // 配置日志组件
-        $handler = app()->log->handler;
-        $fileHandler = $handler->fileHandler;
-        $fileHandler->single = $this->config['setting']['log_file'] ?? '';
+        /** @var \Mix\Log\MultiHandler $multiHandler */
+        $multiHandler = app()->log->handler;
+        foreach ($multiHandler->handlers as $handler) {
+            if ($handler instanceof \Mix\Log\FileHandler) {
+                $handler->single = $this->config['setting']['log_file'] ?? '';
+                break;
+            }
+        }
         // Swoole 判断
         if (!extension_loaded('swoole')) {
             println('Need swoole extension to run, install: https://www.swoole.com/');
