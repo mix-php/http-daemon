@@ -26,7 +26,7 @@ return [
 
         'service start' => [
             'Service\Start',
-            'description' => 'Start the mix-httpd service.',
+            'description' => "\tStart the mix-httpd service.",
             'options'     => [
                 [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
                 [['d', 'daemon'], 'description' => "\t" . 'Run in the background'],
@@ -36,7 +36,7 @@ return [
 
         'service stop' => [
             'Service\Stop',
-            'description' => 'Stop the mix-httpd service.',
+            'description' => "\tStop the mix-httpd service.",
             'options'     => [
                 [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
             ],
