@@ -7,7 +7,7 @@ return [
     'appName'          => 'mix-httpd',
 
     // 应用版本
-    'appVersion'       => '2.0.1',
+    'appVersion'       => '2.0.3',
 
     // 应用调试
     'appDebug'         => env('APP_DEBUG'),
@@ -24,8 +24,8 @@ return [
     // 命令
     'commands'         => [
 
-        'service start' => [
-            'Service\Start',
+        'start' => [
+            'Start',
             'description' => "\tStart the mix-httpd service.",
             'options'     => [
                 [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
@@ -34,16 +34,16 @@ return [
             ],
         ],
 
-        'service stop' => [
-            'Service\Stop',
+        'stop' => [
+            'Stop',
             'description' => "\tStop the mix-httpd service.",
             'options'     => [
                 [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
             ],
         ],
 
-        'service restart' => [
-            'Service\Restart',
+        'restart' => [
+            'Restart',
             'description' => 'Restart the mix-httpd service.',
             'options'     => [
                 [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
@@ -52,16 +52,16 @@ return [
             ],
         ],
 
-        'service reload' => [
-            'Service\Reload',
+        'reload' => [
+            'Reload',
             'description' => 'Reload the worker process of the mix-httpd service.',
             'options'     => [
                 [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],
             ],
         ],
 
-        'service status' => [
-            'Service\Status',
+        'status' => [
+            'Status',
             'description' => 'Check the status of the mix-httpd service.',
             'options'     => [
                 [['c', 'configuration'], 'description' => 'FILENAME -- configuration file path'],

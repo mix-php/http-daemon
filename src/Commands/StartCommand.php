@@ -1,6 +1,6 @@
 <?php
 
-namespace Mix\Http\Daemon\Commands\Service;
+namespace Mix\Http\Daemon\Commands;
 
 use Mix\Console\CommandLine\Flag;
 use Mix\Http\Server\HttpServer;
