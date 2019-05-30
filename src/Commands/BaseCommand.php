@@ -58,7 +58,7 @@ class BaseCommand extends AbstractObject
         }
         $config = require $file;
         // 应用配置处理
-        if (!is_file($config['application']['config_file'])) {
+        if (isset($config['application']['config_file']) && !is_file($config['application']['config_file'])) {
             $filename = \Mix\Helper\FileSystemHelper::basename($file);
             println("{$filename}: 'application.config_file' file not found: {$config['application']['config_file']}");
             exit;
@@ -68,7 +68,8 @@ class BaseCommand extends AbstractObject
             'name'       => app()->appName,
             'host'       => $config['server']['host'],
             'port'       => $config['server']['port'],
-            'configFile' => $config['application']['config_file'],
+            'configFile' => $config['application']['config_file'] ?? '',
+            'config'     => $config['application']['config'] ?? [],
             'setting'    => $config['setting'],
         ];
         // 配置日志组件
