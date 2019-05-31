@@ -66,6 +66,7 @@ class BaseCommand extends AbstractObject
         // 构造配置信息
         $this->config = [
             'name'       => app()->appName,
+            'version'    => app()->appVersion,
             'host'       => $config['server']['host'],
             'port'       => $config['server']['port'],
             'configFile' => $config['application']['config_file'] ?? '',
