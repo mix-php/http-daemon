@@ -17,10 +17,10 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "mix/framework": "~2.0.0",
-    "mix/console": "~2.0.0",
-    "mix/log": "~2.0.0",
-    "mix/http-server": "~2.0.0"
+    "mix/framework": "v2.1.x-dev",
+    "mix/console": "v2.1.x-dev",
+    "mix/log": "v2.1.x-dev",
+    "mix/http-server": "v2.1.x-dev"
   },
   "autoload": {
     "psr-4": {
