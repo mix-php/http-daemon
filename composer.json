@@ -1,6 +1,6 @@
 {
   "name": "mix/http-daemon",
-  "description": "MixPHP HTTP 守护程序 http://www.mixphp.cn",
+  "description": "Mix HTTP Daemon http://www.mixphp.cn",
   "type": "project",
   "keywords": [
     "framework",
